@@ -52,7 +52,7 @@ const Header = () => {
               Outdoor Training
             </h1>
             <h2>
-              We're building the system to share training equipment outdoors.
+              We're building a system to share training equipment outdoors.
               <br />
               Sign up to get early access.
             </h2>

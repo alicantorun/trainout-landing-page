@@ -7,43 +7,42 @@ const Features = () => (
   <Section id="features">
     <StyledContainer>
       <Subtitle>Features</Subtitle>
-      <SectionTitle>Smart money management</SectionTitle>
+      <SectionTitle>Locate - Scan - Train</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
-          <FeatureTitle>Notifications</FeatureTitle>
+          <FeatureTitle>Available 24/7</FeatureTitle>
           <FeatureText>
-            Receive budget and spending alerts based on your favorite triggers.
+            Train spontaneously and whenever it fits into your schedule.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Security</FeatureTitle>
+          <FeatureTitle>Hassle-free</FeatureTitle>
           <FeatureText>
-            Your data is always safe with us as we use the latest security
-            protocols.
+            No need to carry your heavy equipment to your favorite outdoor
+            training spot.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Automation</FeatureTitle>
+          <FeatureTitle>Fully equipped</FeatureTitle>
           <FeatureText>
-            Create smart automated workflows and triggers for your money.
+            Big variety of different training equipment from kettlebells to yoga
+            mats.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
-          <FeatureTitle>Aggregation</FeatureTitle>
-          <FeatureText>
-            Easily link up to 5 banks to your finance account.
-          </FeatureText>
+          <FeatureTitle>Easy access</FeatureTitle>
+          <FeatureText>Simple to use via mobile app.</FeatureText>
         </FeatureItem>
-        <FeatureItem>
+        {/* <FeatureItem>
           <FeatureTitle>Payments</FeatureTitle>
           <FeatureText>Send money to friends and family with ease.</FeatureText>
-        </FeatureItem>
-        <FeatureItem>
+        </FeatureItem> */}
+        {/* <FeatureItem>
           <FeatureTitle>Rewards</FeatureTitle>
           <FeatureText>
             High interest and rewards for hitting your goals.
           </FeatureText>
-        </FeatureItem>
+        </FeatureItem> */}
       </FeaturesGrid>
     </StyledContainer>
   </Section>
@@ -54,7 +53,7 @@ export default Features
 const StyledContainer = styled(Container)``
 
 const SectionTitle = styled.h3`
-  color: ${props => props.theme.color.primary};
+  color: ${(props) => props.theme.color.primary};
   display: flex;
   justify-content: center;
   margin: 0 auto 40px;
@@ -63,7 +62,7 @@ const SectionTitle = styled.h3`
 
 const Subtitle = styled.h5`
   font-size: 16px;
-  color: ${props => props.theme.color.accent};
+  color: ${(props) => props.theme.color.accent};
   letter-spacing: 0px;
   margin-bottom: 12px;
   text-align: center;
@@ -76,7 +75,7 @@ const FeaturesGrid = styled.div`
   margin: 0px auto;
   grid-column-gap: 40px;
   grid-row-gap: 35px;
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
     grid-template-columns: 1fr;
     padding: 0 64px;
   }
@@ -90,7 +89,7 @@ const FeatureItem = styled.div`
 `
 
 const FeatureTitle = styled.h4`
-  color: ${props => props.theme.color.primary};
+  color: ${(props) => props.theme.color.primary};
   letter-spacing: 0px;
   line-height: 30px;
   margin-bottom: 10px;

@@ -1,6 +1,27 @@
 // Theme
 
 const theme = {
+  trainout: {
+    color: {
+      background: {
+        darkBg: "#1D1D1D",
+      },
+      text: {
+        lightGray: "#D2D2D2",
+        darkGray: "#A9A9A9",
+      },
+      secondary: {
+        lightGreen: "#6FCF97",
+        darkGreen: "#27AE60",
+      },
+    },
+    font: {
+      regular: `'Montserrat'`,
+      medium: `'Montserrat Medium'`,
+      bold: `'Montserrat Bold'`,
+      black: `'Montserrat Black'`,
+    },
+  },
   font: {
     primary: `'HK Grotesk Normal'`,
     secondary: `'HK Grotesk Medium'`,

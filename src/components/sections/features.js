@@ -25,24 +25,27 @@ const Features = () => (
         <FeatureItem>
           <FeatureTitle>Fully equipped</FeatureTitle>
           <FeatureText>
-            Big variety of different training equipment from kettlebells to yoga
-            mats.
+            Big variety of high-quality training equipment from kettlebells to
+            yoga mats.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>
           <FeatureTitle>Easy access</FeatureTitle>
           <FeatureText>Simple to use via mobile app.</FeatureText>
         </FeatureItem>
-        {/* <FeatureItem>
-          <FeatureTitle>Payments</FeatureTitle>
-          <FeatureText>Send money to friends and family with ease.</FeatureText>
-        </FeatureItem> */}
-        {/* <FeatureItem>
-          <FeatureTitle>Rewards</FeatureTitle>
+        <FeatureItem>
+          <FeatureTitle>Limitless</FeatureTitle>
           <FeatureText>
-            High interest and rewards for hitting your goals.
+            Break your standard workout routine and enjoy the freedom of
+            movement outdoors.
           </FeatureText>
-        </FeatureItem> */}
+        </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>Community</FeatureTitle>
+          <FeatureText>
+            Connect with like-minded people and train together.
+          </FeatureText>
+        </FeatureItem>
       </FeaturesGrid>
     </StyledContainer>
   </Section>

@@ -3,6 +3,8 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 import Scrollspy from "react-scrollspy"
 import { Menu, X } from "react-feather"
 
+// import TrainoutLogo from "../../../../public/trainout-logo.png"
+
 import { Container } from "../../global"
 import {
   Nav,
@@ -13,9 +15,16 @@ import {
   MobileMenu,
   Mobile,
   ActionsContainer,
+  BrandLogo,
+  InstagramIcon,
+  FacebookIcon,
+  TwitterIcon,
+  TrainoutLogo,
 } from "./style"
 
-const NAV_ITEMS = ["Features", "Product", "Pricing", ""]
+const NAV_ITEMS = [
+  // "Features", "Product", "Pricing"
+]
 
 export default class Navigation extends Component {
   state = {
@@ -27,7 +36,7 @@ export default class Navigation extends Component {
     window.addEventListener("scroll", this.handleScroll)
   }
 
-  handleScroll = event => {
+  handleScroll = (event) => {
     const scrollTop = window.pageYOffset
 
     if (scrollTop > 32) {
@@ -38,7 +47,9 @@ export default class Navigation extends Component {
   }
 
   toggleMobileMenu = () => {
-    this.setState(prevState => ({ mobileMenuOpen: !prevState.mobileMenuOpen }))
+    this.setState((prevState) => ({
+      mobileMenuOpen: !prevState.mobileMenuOpen,
+    }))
   }
 
   closeMobileMenu = () => {
@@ -47,7 +58,7 @@ export default class Navigation extends Component {
     }
   }
 
-  getNavAnchorLink = item => (
+  getNavAnchorLink = (item) => (
     <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
       {item}
     </AnchorLink>
@@ -56,12 +67,12 @@ export default class Navigation extends Component {
   getNavList = ({ mobile = false }) => (
     <NavListWrapper mobile={mobile}>
       <Scrollspy
-        items={NAV_ITEMS.map(item => item.toLowerCase())}
+        items={NAV_ITEMS.map((item) => item.toLowerCase())}
         currentClassName="active"
         mobile={mobile}
         offset={-64}
       >
-        {NAV_ITEMS.map(navItem => (
+        {NAV_ITEMS.map((navItem) => (
           <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
         ))}
       </Scrollspy>
@@ -72,16 +83,23 @@ export default class Navigation extends Component {
     const { mobileMenuOpen } = this.state
 
     return (
-      <Nav {...this.props} scrolled={this.state.hasScrolled}>
+      <Nav
+        {...this.props}
+        // scrolled={this.state.hasScrolled}
+      >
         <StyledContainer>
-          <Brand>
-            <Scrollspy offset={-64} item={["top"]} currentClassName="active">
-              <AnchorLink href="#top" onClick={this.closeMobileMenu}>
-                Finance
-              </AnchorLink>
-            </Scrollspy>
-          </Brand>
-          <Mobile>
+          {/* <Scrollspy offset={-64} item={["top"]} currentClassName="active"> */}
+          {/* <AnchorLink> */}
+          {/* <BrandLogo
+            src={TrainoutLogo}
+            href="#top"
+            onClick={this.closeMobileMenu}
+          /> */}
+
+          <TrainoutLogo href="#top" onClick={this.closeMobileMenu} />
+          {/* </AnchorLink> */}
+          {/* </Scrollspy> */}
+          {/* <Mobile>
             <button
               onClick={this.toggleMobileMenu}
               style={{ color: "black", background: "none" }}
@@ -93,10 +111,32 @@ export default class Navigation extends Component {
               )}
             </button>
           </Mobile>
-
-          <Mobile hide>{this.getNavList({})}</Mobile>
+          <Mobile hide>{this.getNavList({})}</Mobile> */}
           <ActionsContainer>
-            <button>Sign up</button>
+            <a
+              href="https://www.facebook.com/TrainoutApp"
+              target="_blank"
+              rel="noopener
+            noreferrer"
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              href="https://www.instagram.com/trainoutapp"
+              target="_blank"
+              rel="noopener
+            noreferrer"
+            >
+              <InstagramIcon />
+            </a>
+            <a
+              href="https://twitter.com/TrainoutApp"
+              target="_blank"
+              rel="noopener
+            noreferrer"
+            >
+              <TwitterIcon />
+            </a>
           </ActionsContainer>
         </StyledContainer>
         <Mobile>

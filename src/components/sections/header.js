@@ -60,7 +60,7 @@ const Header = () => {
                 />
                 <HeaderButton>Early access</HeaderButton>
               </HeaderForm>
-              <h2>{msg}</h2>
+              <ErrorMessage>{msg}</ErrorMessage>
             </HeaderTextGroup>
             <ImageWrapper>
               <TrainoutVectoral />
@@ -78,8 +78,8 @@ export default Header
 
 const HeaderWrapper = styled.header`
   background-color: ${(props) => props.theme.trainout.color.background.darkBg};
-  padding: 160px 0 80px 0;
-  padding-bottom: 160px;
+  padding: 160px 80px 160px 80px;
+
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
 
   @media (max-width: ${(props) => props.theme.screen.lg}) {
@@ -142,6 +142,9 @@ const HeaderTextGroup = styled.div`
     margin-bottom: 48px;
   }
 `
+const ErrorMessage = styled.h2`
+  position: absolute;
+`
 
 const Flex = styled.div`
   display: grid;
@@ -153,7 +156,7 @@ const Flex = styled.div`
 
   @media (max-width: ${(props) => props.theme.screen.lg}) {
     grid-template-columns: 1fr;
-    grid-gap: 64px;
+    grid-gap: 32px;
   }
 `
 

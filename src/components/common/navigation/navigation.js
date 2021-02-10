@@ -3,8 +3,6 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 import Scrollspy from "react-scrollspy"
 import { Menu, X } from "react-feather"
 
-// import TrainoutLogo from "../../../../public/trainout-logo.png"
-
 import { Container } from "../../global"
 import {
   Nav,

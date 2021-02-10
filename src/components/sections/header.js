@@ -90,6 +90,7 @@ const Subtitle = styled.h5`
   font-size: 16px;
   color: ${(props) => props.theme.color.accent};
   letter-spacing: 0px;
+
   margin-bottom: 16px;
 `
 
@@ -156,7 +157,7 @@ const Flex = styled.div`
 
   @media (max-width: ${(props) => props.theme.screen.lg}) {
     grid-template-columns: 1fr;
-    grid-gap: 32px;
+    grid-gap: 48px;
   }
 `
 
@@ -170,6 +171,7 @@ const HeaderForm = styled.form`
 `
 
 const HeaderInput = styled.input`
+  z-index: 9999;
   font-weight: 500;
   font-size: 16px;
   color: ${(props) => props.theme.color.primary};

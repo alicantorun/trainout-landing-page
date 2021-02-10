@@ -157,7 +157,7 @@ const Flex = styled.div`
 
   @media (max-width: ${(props) => props.theme.screen.lg}) {
     grid-template-columns: 1fr;
-    grid-gap: 48px;
+    grid-gap: 64px;
   }
 `
 

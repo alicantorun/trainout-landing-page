@@ -131,7 +131,7 @@ export const ActionsContainer = styled.div`
   display: flex;
   align-items: center;
   @media (max-width: ${(props) => props.theme.screen.xs}) {
-    display: none;
+    /* display: none; */
   }
 
   button {

@@ -67,7 +67,7 @@ const Header = () => {
             <ErrorMessage>{msg}</ErrorMessage>
           </HeaderTextGroup>
           <ImageWrapper>
-            <TrainoutVectoral />
+            <TrainoutVectoral style={{ padding: "32px" }} />
           </ImageWrapper>
         </Flex>
       </Container>
@@ -149,6 +149,7 @@ const HeaderTextGroup = styled.div`
 `
 const ErrorMessage = styled.h2`
   z-index: 1000;
+  color: white !important;
   position: absolute;
 `
 

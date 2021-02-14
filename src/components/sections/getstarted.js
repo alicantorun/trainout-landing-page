@@ -11,10 +11,15 @@ const GetStarted = () => (
         Take your workout to the next level,
         <br /> sign up for the beta
       </GetStartedTitle>
-      <TryItButton onClick={() => scrollTo("#early-access-form")}>
+      <TryItButton onClick={() => scrollTo("#hero")}>
         Get early access
       </TryItButton>
-      <Subtitle>No credit card required.</Subtitle>
+      <Subtitle>
+        Contact us at&nbsp;
+        <Mail target="_blank" href="mailto:info@trainout.app">
+          info@trainout.app
+        </Mail>
+      </Subtitle>
     </GetStartedContainer>
   </StyledSection>
 )
@@ -68,6 +73,13 @@ const TryItButton = styled.button`
 `
 
 const Subtitle = styled.span`
+  ${(props) => props.theme.font_size.xxsmall}
+  padding-top: 16px;
+  font-size: 14px;
+  color: ${(props) => props.theme.trainout.color.text.lightGray};
+`
+
+const Mail = styled.a`
   ${(props) => props.theme.font_size.xxsmall}
   padding-top: 16px;
   font-size: 14px;

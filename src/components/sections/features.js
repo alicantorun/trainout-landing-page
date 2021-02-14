@@ -10,12 +10,6 @@ const Features = () => (
       <SectionTitle>Locate - Scan - Train</SectionTitle>
       <FeaturesGrid>
         <FeatureItem>
-          <FeatureTitle>Available 24/7</FeatureTitle>
-          <FeatureText>
-            Train spontaneously and whenever it fits into your schedule.
-          </FeatureText>
-        </FeatureItem>
-        <FeatureItem>
           <FeatureTitle>Hassle-free</FeatureTitle>
           <FeatureText>
             No need to carry your heavy equipment to your favorite outdoor
@@ -27,6 +21,12 @@ const Features = () => (
           <FeatureText>
             Big variety of high-quality training equipment from kettlebells to
             yoga mats.
+          </FeatureText>
+        </FeatureItem>
+        <FeatureItem>
+          <FeatureTitle>Available 24/7</FeatureTitle>
+          <FeatureText>
+            Train spontaneously and whenever it fits into your schedule.
           </FeatureText>
         </FeatureItem>
         <FeatureItem>

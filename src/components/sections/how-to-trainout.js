@@ -11,7 +11,7 @@ const HowToTrainout = () => (
   <StyledSection id="how-to-trainout">
     <GetStartedContainer>
       <SectionTitle>HOW TO TRAINOUT</SectionTitle>
-      <Subtitle>Effective training for all.</Subtitle>
+      <Subtitle>Effective outdoor training for all.</Subtitle>
       <FeaturesGrid>
         <FeatureItem>
           <LocateScanTrain />
@@ -26,7 +26,8 @@ const HowToTrainout = () => (
         </FeatureItem>
         <FeatureItem>
           <Subtitle>
-            Download the TrainOut app to discover available lockers near you.
+            Trainout app will be available soon for both App Store and Play
+            Store. We're working on it, stay tuned!
           </Subtitle>
         </FeatureItem>
       </FeaturesGrid>

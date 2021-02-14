@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import _TwitterIcon from "../../../assets/twitter-logo.svg"
-import _FacebookIcon from "../../../assets/facebook-logo.svg"
-import _InstagramIcon from "../../../assets/instagram-logo.svg"
-import _TrainoutLogo from "../../../assets/trainout-logo.svg"
+import _TwitterIcon from "../../../assets/twitter-logo"
+import _FacebookIcon from "../../../assets/facebook-logo"
+import _InstagramIcon from "../../../assets/instagram-logo"
+import _TrainoutLogo from "../../../assets/trainout-logo"
 
 import { Container } from "../../global"
 

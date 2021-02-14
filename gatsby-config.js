@@ -4,9 +4,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `TrainOut`,
-    description: `The Future of Outdoor Training.`,
-    author: `TrainOut`,
+    title: `Trainout`,
+    description: `The future of outdoor training.`,
+    author: `Trainout`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -42,7 +42,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/assets/trainout-logo.png`,
       },
     },
     {

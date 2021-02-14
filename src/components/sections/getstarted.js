@@ -7,7 +7,10 @@ import { Container, Section } from "../global"
 const GetStarted = () => (
   <StyledSection>
     <GetStartedContainer>
-      <GetStartedTitle>Be the first to get the beta</GetStartedTitle>
+      <GetStartedTitle>
+        Take your workout to the next level,
+        <br /> sign up for the beta
+      </GetStartedTitle>
       <TryItButton onClick={() => scrollTo("#early-access-form")}>
         Get early access
       </TryItButton>
@@ -20,7 +23,7 @@ export default GetStarted
 
 const StyledSection = styled(Section)`
   background-color: ${(props) => props.theme.trainout.color.background.darkBg};
-  clip-path: polygon(0 0, 100% 14%, 100% 100%, 0% 100%);
+  /* clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%); */
 `
 
 const GetStartedContainer = styled(Container)`

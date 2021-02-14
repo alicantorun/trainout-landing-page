@@ -6,9 +6,9 @@ import addToMailchimp from "gatsby-plugin-mailchimp"
 
 import { Container } from "../global"
 
-import TrainoutVectoral from "../../assets/traoinout-vectoral.svg"
-import MaskRight from "../../assets/trainout-mask-right.svg"
-import MaskLeft from "../../assets/trainout-mask-left.svg"
+import TrainoutVectoral from "../../assets/traoinout-vectoral"
+import MaskRight from "../../assets/trainout-mask-right"
+import MaskLeft from "../../assets/trainout-mask-left"
 
 const Header = () => {
   const [email, setEmail] = React.useState("")

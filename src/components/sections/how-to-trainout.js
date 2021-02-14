@@ -11,7 +11,7 @@ const HowToTrainout = () => (
   <StyledSection id="how-to-trainout">
     <GetStartedContainer>
       <SectionTitle>HOW TO TRAINOUT</SectionTitle>
-      <Subtitle>Effective outdoor training for all.</Subtitle>
+      <Subtitle>Effective outdoor training for all</Subtitle>
       <FeaturesGrid>
         <FeatureItem>
           <LocateScanTrain />

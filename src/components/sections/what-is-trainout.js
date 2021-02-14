@@ -20,14 +20,14 @@ const VideoSection = () => (
             <Video videoSrcURL={VIDEO_URLS.TIME_CHANGES} />
           </VideoWrapper>
           <FeatureTitle>Anytime</FeatureTitle>
-          <FeatureText>Train day and night</FeatureText>
+          <FeatureText>Train day and night.</FeatureText>
         </FeatureItem>
         <FeatureItem>
           <VideoWrapper>
             <Video videoSrcURL={VIDEO_URLS.SEASONAL_CHANGES} />
           </VideoWrapper>
           <FeatureTitle>Any condition</FeatureTitle>
-          <FeatureText>Train in sunshine, rain and snow</FeatureText>
+          <FeatureText>Train in sunshine, rain and snow.</FeatureText>
         </FeatureItem>
       </FeaturesGrid>
     </StyledContainer>

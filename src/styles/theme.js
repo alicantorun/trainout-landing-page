@@ -65,6 +65,7 @@ const theme = {
     sm: "767px",
     md: "991px",
     lg: "1199px",
+    xl: "1399px",
   },
 }
 

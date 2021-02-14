@@ -1,10 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
-import Img from "gatsby-image"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
-import { Container } from "../global"
+import { Container, Section as _Section } from "../global"
 
 import TrainoutVectoral from "../../assets/traoinout-vectoral"
 import MaskRight from "../../assets/trainout-mask-right"
@@ -18,7 +16,14 @@ const Header = () => {
     e.preventDefault()
     const result = await addToMailchimp(email)
 
-    if (!email) {
+    const validateEmail = (email) => {
+      const re = /\S+@\S+\.\S+/
+      return re.test(email)
+    }
+
+    if (!validateEmail(email)) {
+      setMsg("Please fill a valid email ...")
+    } else if (!email) {
       setMsg("Please fill your email ...")
     } else {
       if (result.result === "success") {
@@ -34,67 +39,65 @@ const Header = () => {
   }
 
   return (
-    <>
-      <HeaderWrapper id="early-access-form">
-        <Container>
-          <Flex>
-            <HeaderTextGroup>
-              <Subtitle>Introducing</Subtitle>
-              <h1>
-                The Future of
-                <br />
-                Outdoor Training
-              </h1>
-              <h2>
-                We're building a system to share training equipment outdoors.
-                <br />
-                Sign up to get early access.
-              </h2>
-              <HeaderForm onSubmit={handleSubmit}>
-                <HeaderInput
-                  placeholder="Your email"
-                  onChange={(e) => {
-                    setEmail(e.target.value)
-                  }}
-                  value={email}
-                />
-                <HeaderButton>Early access</HeaderButton>
-              </HeaderForm>
-              <ErrorMessage>{msg}</ErrorMessage>
-            </HeaderTextGroup>
-            <ImageWrapper>
-              <TrainoutVectoral />
-            </ImageWrapper>
-          </Flex>
-        </Container>
-        <HeroMaskRight />
-      </HeaderWrapper>
+    <Section id="hero">
+      <Container>
+        <Flex>
+          <HeaderTextGroup>
+            <Subtitle>Introducing</Subtitle>
+            <h1>
+              The Future of
+              <br />
+              Outdoor Training
+            </h1>
+            <h2>
+              We're building a system to share training equipment outdoors.
+              <br />
+              Sign up to get early access.
+            </h2>
+            <HeaderForm onSubmit={handleSubmit}>
+              <HeaderInput
+                placeholder="Your email"
+                onChange={(e) => {
+                  setEmail(e.target.value)
+                }}
+                value={email}
+              />
+              <HeaderButton>Early access</HeaderButton>
+            </HeaderForm>
+            <ErrorMessage>{msg}</ErrorMessage>
+          </HeaderTextGroup>
+          <ImageWrapper>
+            <TrainoutVectoral />
+          </ImageWrapper>
+        </Flex>
+      </Container>
+      <HeroMaskRight />
       <HeroMaskLeft />
-    </>
+    </Section>
   )
 }
 
 export default Header
 
-const HeaderWrapper = styled.header`
+const Section = styled(_Section)`
   background-color: ${(props) => props.theme.trainout.color.background.darkBg};
   padding: 160px 80px 160px 80px;
 
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
 
   @media (max-width: ${(props) => props.theme.screen.lg}) {
-    padding: 16px 0 16px 0;
+    padding: 16px 0px 16px 0px;
   }
 `
 const Subtitle = styled.h5`
   font-size: 16px;
   color: ${(props) => props.theme.color.accent};
   letter-spacing: 0px;
-
   margin-bottom: 16px;
 `
 
 const HeroMaskRight = styled(MaskRight)`
+  z-index: 0;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -106,6 +109,7 @@ const HeroMaskRight = styled(MaskRight)`
 `
 
 const HeroMaskLeft = styled(MaskLeft)`
+  z-index: 0;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -144,6 +148,7 @@ const HeaderTextGroup = styled.div`
   }
 `
 const ErrorMessage = styled.h2`
+  z-index: 1000;
   position: absolute;
 `
 
@@ -164,14 +169,14 @@ const Flex = styled.div`
 const HeaderForm = styled.form`
   display: flex;
   flex-direction: row;
-
+  z-index: 1000;
   @media (max-width: ${(props) => props.theme.screen.sm}) {
     flex-direction: column;
   }
 `
 
 const HeaderInput = styled.input`
-  z-index: 9999;
+  z-index: 1000;
   font-weight: 500;
   font-size: 16px;
   color: ${(props) => props.theme.color.primary};
@@ -199,6 +204,7 @@ const HeaderInput = styled.input`
 `
 
 const HeaderButton = styled.button`
+  z-index: 1000;
   font-weight: 500;
   font-size: 14px;
   color: white;

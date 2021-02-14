@@ -5,7 +5,7 @@ import { Section, Container } from "../global"
 
 const Features = () => (
   <Section id="features">
-    <StyledContainer>
+    <HowToTrainoutContainer>
       <Subtitle>Features</Subtitle>
       <SectionTitle>Locate - Scan - Train</SectionTitle>
       <FeaturesGrid>
@@ -47,13 +47,18 @@ const Features = () => (
           </FeatureText>
         </FeatureItem>
       </FeaturesGrid>
-    </StyledContainer>
+    </HowToTrainoutContainer>
   </Section>
 )
 
 export default Features
 
-const StyledContainer = styled(Container)``
+const HowToTrainoutContainer = styled(Container)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
 
 const SectionTitle = styled.h3`
   color: ${(props) => props.theme.color.primary};
@@ -68,6 +73,7 @@ const Subtitle = styled.h5`
   color: ${(props) => props.theme.color.accent};
   letter-spacing: 0px;
   margin-bottom: 12px;
+  margin-top: 0px;
   text-align: center;
 `
 
@@ -77,10 +83,11 @@ const FeaturesGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   margin: 0px auto;
   grid-column-gap: 40px;
-  grid-row-gap: 35px;
+  grid-row-gap: 32px;
+
   @media (max-width: ${(props) => props.theme.screen.sm}) {
     grid-template-columns: 1fr;
-    padding: 0 64px;
+    padding: 0 0px;
   }
 `
 

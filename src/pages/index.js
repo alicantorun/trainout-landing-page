@@ -9,14 +9,14 @@ import Features from "../components/sections/features"
 import Footer from "../components/sections/footer"
 import GetStarted from "../components/sections/getstarted"
 import HowToTrainout from "../components/sections/how-to-trainout"
-import Video from "../components/sections/video"
+import WhatIsTrainout from "../components/sections/what-is-trainout"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Future of outdoor training" />
     <Navigation />
     <Hero />
-    <Video />
+    <WhatIsTrainout />
     <HowToTrainout />
     <Features />
     <GetStarted />

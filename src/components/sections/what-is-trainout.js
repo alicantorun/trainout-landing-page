@@ -4,28 +4,27 @@ import styled from "styled-components"
 import { Section, Container } from "../global"
 import Video from "../common/video"
 
+const VIDEO_URLS = {
+  TIME_CHANGES: "https://www.youtube.com/embed/u97VaxZPcj8",
+  SEASONAL_CHANGES: "https://www.youtube.com/embed/u1Y_2TmG3fk",
+}
+
 const VideoSection = () => (
-  <Section id="video">
+  <Section id="what-is-trainout">
     <StyledContainer>
       <SectionTitle>WHAT IS TRAINOUT</SectionTitle>
       <Subtitle>Worlds first training equipment sharing system</Subtitle>
       <FeaturesGrid>
         <FeatureItem>
           <VideoWrapper>
-            <Video
-              videoSrcURL="https://www.youtube.com/embed/saEPudHOvGM"
-              videoTitle="Official Music Video on YouTube"
-            />
+            <Video videoSrcURL={VIDEO_URLS.SEASONAL_CHANGES} />
           </VideoWrapper>
           <FeatureTitle>Anytime</FeatureTitle>
           <FeatureText>Train day and night</FeatureText>
         </FeatureItem>
         <FeatureItem>
           <VideoWrapper>
-            <Video
-              videoSrcURL="https://www.youtube.com/embed/lj1SG_wNJfc"
-              videoTitle="Official Music Video on YouTube"
-            />
+            <Video videoSrcURL={VIDEO_URLS.TIME_CHANGES} />
           </VideoWrapper>
           <FeatureTitle>Any condition</FeatureTitle>
           <FeatureText>Train in sunshine, rain and snow</FeatureText>
@@ -63,7 +62,6 @@ const Subtitle = styled.h5`
 `
 
 const FeaturesGrid = styled.div`
-  /* max-width: 670px; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0px auto;

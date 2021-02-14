@@ -14,6 +14,7 @@
     /* Safari, Android, iOS */ url("./montserrat-v15-latin-300.svg#Montserrat")
       format("svg"); /* Legacy iOS */
 }
+
 /* montserrat-regular - latin */
 @font-face {
   font-family: "Montserrat Medium";
@@ -30,6 +31,7 @@
     /* Safari, Android, iOS */
       url("./montserrat-v15-latin-regular.svg#Montserrat") format("svg"); /* Legacy iOS */
 }
+
 /* montserrat-700 - latin */
 @font-face {
   font-family: "Montserrat Bold";
@@ -46,6 +48,7 @@
     /* Safari, Android, iOS */ url("./montserrat-v15-latin-700.svg#Montserrat")
       format("svg"); /* Legacy iOS */
 }
+
 /* montserrat-900 - latin */
 @font-face {
   font-family: "Montserrat Black";

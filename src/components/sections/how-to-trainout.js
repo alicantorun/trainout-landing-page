@@ -8,7 +8,7 @@ import LocateScanTrain from "../../assets/trainout-locate-scan-train"
 import { Container, Section } from "../global"
 
 const HowToTrainout = () => (
-  <StyledSection>
+  <StyledSection id="how-to-trainout">
     <GetStartedContainer>
       <SectionTitle>HOW TO TRAINOUT</SectionTitle>
       <Subtitle>Effective training for all.</Subtitle>
@@ -17,7 +17,12 @@ const HowToTrainout = () => (
           <LocateScanTrain />
         </FeatureItem>
         <FeatureItem>
-          <HowToTrainoutSVG style={{ width: "100%" }} />
+          <HowToTrainoutSVG
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+          />
         </FeatureItem>
         <FeatureItem>
           <Subtitle>
@@ -70,7 +75,6 @@ const Subtitle = styled.h5`
 
 const StyledSection = styled(Section)`
   background-color: ${(props) => props.theme.trainout.color.background.darkBg};
-  /* clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%); */
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
 `
 
@@ -79,34 +83,4 @@ const GetStartedContainer = styled(Container)`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 80px 0 40px;
-`
-
-const TryItButton = styled.button`
-  font-weight: 500;
-  font-size: 14px;
-  color: white;
-  letter-spacing: 1px;
-  height: 60px;
-  display: block;
-  margin-left: 8px;
-  text-transform: uppercase;
-  cursor: pointer;
-  white-space: nowrap;
-  background: ${(props) => props.theme.trainout.color.secondary.darkGreen};
-  border-radius: 40px;
-  padding: 0px 40px;
-  border-width: 0px;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
-  outline: 0px;
-  &:hover {
-    box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
-  }
-  @media (max-width: ${(props) => props.theme.screen.md}) {
-  }
-  @media (max-width: ${(props) => props.theme.screen.sm}) {
-    margin-left: 0;
-  }
 `

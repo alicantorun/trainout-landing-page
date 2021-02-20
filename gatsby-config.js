@@ -13,15 +13,14 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-smoothscroll`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: process.env.GA_TRACKING_ID || "none",
-        // Puts tracking script in the head instead of the body
-        head: false,
-        // Setting this parameter is optional
-        anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-MEEX28LP07", // Google Analytics / GA
+          "AW-CONVERSION_ID", // Google Ads / Adwords / AW
+          "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
+        ],
       },
     },
     {
